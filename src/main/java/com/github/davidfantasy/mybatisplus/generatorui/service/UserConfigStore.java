@@ -12,12 +12,12 @@ import com.github.davidfantasy.mybatisplus.generatorui.util.PathUtil;
 import com.github.davidfantasy.mybatisplus.generatorui.util.TemplateUtil;
 import com.google.common.collect.Lists;
 import com.google.common.io.Files;
+import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.PostConstruct;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -186,12 +186,12 @@ public class UserConfigStore {
         serviceFile.setTemplateName(TemplateUtil.fileType2TemplateName(serviceFile.getFileType()));
         builtInFiles.add(serviceFile);
         //Service Impl
-        OutputFileInfo serviceImplFile = new OutputFileInfo();
-        serviceImplFile.setBuiltIn(true);
-        serviceImplFile.setFileType(FILE_TYPE_SERVICEIMPL);
-        serviceImplFile.setOutputLocation(pathResolver.resolveServiceImplPackage());
-        serviceImplFile.setTemplateName(TemplateUtil.fileType2TemplateName(serviceImplFile.getFileType()));
-        builtInFiles.add(serviceImplFile);
+//        OutputFileInfo serviceImplFile = new OutputFileInfo();
+//        serviceImplFile.setBuiltIn(true);
+//        serviceImplFile.setFileType(FILE_TYPE_SERVICEIMPL);
+//        serviceImplFile.setOutputLocation(pathResolver.resolveServiceImplPackage());
+//        serviceImplFile.setTemplateName(TemplateUtil.fileType2TemplateName(serviceImplFile.getFileType()));
+//        builtInFiles.add(serviceImplFile);
         //Controller
         OutputFileInfo controllerFile = new OutputFileInfo();
         controllerFile.setBuiltIn(true);
